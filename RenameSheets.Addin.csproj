@@ -1,14 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+	<PropertyGroup>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>Latest</LangVersion>
+		<UseWPF>true</UseWPF>
+		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+		<PlatformTarget>x64</PlatformTarget>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 
-    <RevitYear Condition="'$(RevitYear)' == ''">2024</RevitYear>
-    <OutputPath>bin\$(Configuration)\$(RevitYear)\</OutputPath>
-  </PropertyGroup>
 
-  <PropertyGroup Condition="'$(RevitYear)' &lt;= '2024'">
+
+		<RevitYear Condition="'$(RevitYear)' == ''">2024</RevitYear>
+		<OutputPath>bin\$(Configuration)\$(RevitYear)\</OutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(RevitYear)' &lt;= '2024'">
 		<TargetFramework>net48</TargetFramework>
 		<DefineConstants>$(DefineConstants);REVIT$(RevitYear)</DefineConstants>
 	</PropertyGroup>
@@ -17,8 +24,8 @@
 		<DefineConstants>$(DefineConstants);REVIT$(RevitYear)</DefineConstants>
 	</PropertyGroup>
 
-  <ItemGroup Condition="'$(RevitYear)' != ''">
-    <PackageReference Include="Revit_All_Main_Versions_API_x64" Version="$(RevitYear).*" PrivateAsses="All" ExcludeAssets="Runtime" />
-  </ItemGroup>
+	<ItemGroup Condition="'$(RevitYear)' != ''">
+		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="$(RevitYear).*" PrivateAsses="All" ExcludeAssets="Runtime" />
+	</ItemGroup>
 
 </Project>
