@@ -1,6 +1,6 @@
 ﻿namespace RenameSheets.Addin;
 
-public class Class1
+public class Command
 {
 
 }

@@ -1,0 +1,13 @@
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Name>Rename Sheets Command</Name>
+    <Assembly>RenameSheets.Addin.dll</Assembly>
+    <AddInId>4445303b-5172-407a-ad2e-f6dad96cace4</AddInId>
+    <FullClassName>RenameSheets.Addin.Command</FullClassName>
+    <Text>Rename Sheets</Text>
+    <Description>Comando para renomear folhas no Revit.</Description>
+    <VendorId>Ricardo Braga</VendorId>
+    <VendorDescription>BIM</VendorDescription>
+    <VisibilityMode>AlwaysVisible</VisibilityMode>
+  </AddIn>
+</RevitAddIns>
