@@ -11,7 +11,7 @@
 
 
 
-		<RevitYear Condition="'$(RevitYear)' == ''">2026</RevitYear>
+		<RevitYear Condition="'$(RevitYear)' == ''">2025</RevitYear>
 		<OutputPath>bin\$(Configuration)\$(RevitYear)\</OutputPath>
 	</PropertyGroup>
 
