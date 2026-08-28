@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -26,8 +26,6 @@
 		<PackageReference Include="Revit_All_Main_Versions_API_x64" Version="$(RevitYear).*" PrivateAsses="All" ExcludeAssets="Runtime" />
 	</ItemGroup>
 
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-	  <Exec Command="if $(ConfigurationName) == Release (&#xD;&#xA;    powershell.exe -ExecutionPolicy Bypass -File &quot;$(SolutionDir)OrganizarReleases.ps1&quot;&#xD;&#xA;)" />
-	</Target>
+
 
 </Project>
